@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fact_user_activity
+    description: |
+      This model aggregates user activity data from various sources including user registration, 
+      sign-ins, sign-outs, item views, add-to-cart actions, and purchases. The data is 
+      aggregated on a per-user basis to provide a comprehensive view of user behavior.
+    columns:
+      - name: user_id
+        description: The unique identifier for a user.
+        tests:
+          - unique
+          - not_null
+
+      - name: user_registration_age
+        description: The age of the user at the time of registration.
+
+      - name: user_registration_masked_email
+        description: A masked version of the user's email address for privacy.
+
+      - name: user_registration_preferred_language
+        description: The preferred language selected by the user during registration.
+
+      - name: first_activity_timestamp
+        description: The timestamp of the user's first activity in the system (from registration).
+
+      - name: total_sign_ins
+        description: The total number of sign-ins made by the user.
+        tests:
+          - not_null
+
+      - name: total_sign_outs
+        description: The total number of sign-outs made by the user.
+        tests:
+          - not_null
+
+      - name: total_items_viewed
+        description: The total number of items viewed by the user.
+
+      - name: distinct_items_viewed
+        description: The total number of distinct items viewed by the user.
+
+      - name: total_items_added_to_cart
+        description: The total number of items added to the cart by the user.
+
+      - name: distinct_items_added_to_cart
+        description: The total number of distinct items added to the cart by the user.
+
+      - name: total_purchases
+        description: The total number of purchases made by the user.
+
+      - name: distinct_cart_purchases
+        description: The total number of distinct carts purchased by the user.
+
+      - name: last_purchase_timestamp
+        description: The timestamp of the user's most recent purchase.

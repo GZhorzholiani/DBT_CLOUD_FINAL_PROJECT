@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: FINAL_PROJECT
+    database: "{{ target.database }}"
+    schema: PUBLIC
+    tables:
+      - name: ADD_TO_CART
+      - name: CHECK_OUT
+      - name: ITEM_VIEW
+      - name: SIGN_IN
+      - name: SIGN_OUT
+      - name: USER_REGISTRATION

@@ -1,0 +1,27 @@
+name: 'FINAL_PROJECT'
+version: '1.0'
+
+config-version: 2
+
+models:
+  FINAL_PROJECT:
+    staging:
+      +materialized: view
+      stg_user_registration:
+        +enabled: true
+        +database: FINAL_PROJECT
+      stg_sign_in:
+        +enabled: true
+        +database: FINAL_PROJECT
+      stg_item_view:
+        +enabled: true
+        +database: FINAL_PROJECT
+      stg_add_to_cart:
+        +enabled: true
+        +database: FINAL_PROJECT
+      stg_check_out:
+        +enabled: true
+        +database: FINAL_PROJECT
+      stg_sign_out:
+        +enabled: true
+        +database: FINAL_PROJECT
