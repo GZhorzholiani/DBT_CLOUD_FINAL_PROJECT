@@ -15,15 +15,18 @@ models:
 
       - name: user_registration_age
         description: The age of the user at the time of registration.
+          - not_null
 
       - name: user_registration_masked_email
         description: A masked version of the user's email address for privacy.
+          - not_null
 
       - name: user_registration_preferred_language
         description: The preferred language selected by the user during registration.
 
       - name: first_activity_timestamp
         description: The timestamp of the user's first activity in the system (from registration).
+          - not_null
 
       - name: total_sign_ins
         description: The total number of sign-ins made by the user.

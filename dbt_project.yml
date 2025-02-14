@@ -6,7 +6,7 @@ config-version: 2
 models:
   FINAL_PROJECT:
     staging:
-      +materialized: view
+      +materialized: table
       stg_user_registration:
         +enabled: true
         +database: FINAL_PROJECT
@@ -23,5 +23,8 @@ models:
         +enabled: true
         +database: FINAL_PROJECT
       stg_sign_out:
+        +enabled: true
+        +database: FINAL_PROJECT
+      stg_movie_statistics:
         +enabled: true
         +database: FINAL_PROJECT

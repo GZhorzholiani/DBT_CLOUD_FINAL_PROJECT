@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: fact_movie_statistics
+    description: "Aggregated statistics for movies, including total views, sales, and revenue."
+    columns:
+      - name: movie_id
+        description: "Unique identifier for each movie."
+        tests:
+          - not_null
+
+      - name: movie_title
+        description: "Title of the movie."
+
+      - name: movie_view_timestamp
+        description: "Timestamp of the movie view."
+
+      - name: movie_checkout_timestamp
+        description: "Timestamp of the movie checkout."
+
+      - name: views_per_movie
+        description: "Total number of times the movie was viewed."
+
+      - name: sales_per_movie
+        description: "Total number of times the movie was sold."
+
+      - name: revenue_per_movie
+        description: "Total revenue generated from sales of the movie."
