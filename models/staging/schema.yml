@@ -11,3 +11,4 @@ sources:
       - name: SIGN_IN
       - name: SIGN_OUT
       - name: USER_REGISTRATION
+      - name: MOVIES_CATALOG_ENRICHED

@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 WITH user_registration AS (
     SELECT 
         user_registration_user_id AS user_id,
