@@ -1,5 +1,3 @@
--- models/marts/fact_movie_statistics.sql
-
 {{ config(
     materialized='table'
 ) }}
