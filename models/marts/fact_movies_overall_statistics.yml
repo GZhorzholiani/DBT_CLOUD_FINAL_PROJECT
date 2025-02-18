@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fact_movies_overall_statistics
+    description: "Aggregated movie statistics including average rating, total revenue, total views, and total movies sold."
+    columns:
+      - name: MOVIES_AVERAGE_RATING
+        description: "The average audience rating of all movies."
+        tests:
+          - not_null
+
+      - name: total_revenue
+        description: "The total revenue generated from movie sales."
+        tests:
+          - not_null
+
+      - name: total_views
+        description: "The total number of movie views."
+        tests:
+          - not_null
+
+      - name: total_movies_sold
+        description: "The total number of movies sold."
+        tests:
+          - not_null

@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 WITH user_activity AS (
     SELECT * FROM {{ ref('fact_user_activity_aggregated') }}
 )

@@ -1,3 +1,7 @@
+{{ config(
+    materialized='table'
+) }}
+
 WITH user_activity AS (
     SELECT 
         user_id,
