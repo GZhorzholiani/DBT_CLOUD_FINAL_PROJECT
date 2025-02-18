@@ -1,5 +1,3 @@
--- models/marts/fact_movie_average_rating.sql
-
 {{ config(
     materialized='table'
 ) }}
@@ -35,7 +33,7 @@ total_movies_sold AS (
 )
 
 SELECT 
-    rm_decoded.AUDIENCERATING AS MOVIES_AVERAGE_RATING,  -- Only return the decoded rating (text)
+    rm_decoded.AUDIENCERATING AS MOVIES_AVERAGE_RATING,  -- Only return the decoded rating
     tr.total_revenue,  
     tv.total_views,
     ts.total_movies_sold

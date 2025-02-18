@@ -1,5 +1,3 @@
--- models/staging/stg_movie_statistics.sql
-
 WITH source AS (
     SELECT
         ITEM_ID,
